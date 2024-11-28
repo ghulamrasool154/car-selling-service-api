@@ -12,7 +12,7 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 // ROUTES
-app.use("/", home);
+app.get("/", home);
 app.use("/api/v1/", routes);
 
 // NOT FOUND ROUTE
