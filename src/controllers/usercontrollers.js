@@ -23,3 +23,11 @@ exports.login = tryCatch(async (req, res, next) => {
     },
   });
 });
+
+exports.getUsers = tryCatch(async (req, res, next) => {
+  const users = await User.find();
+  return res.status(200).json({
+    message: "ok",
+    data: users,
+  });
+});
