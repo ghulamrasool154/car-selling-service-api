@@ -5,12 +5,14 @@ const app = express();
 const cors = require("cors");
 const morgan = require("morgan");
 const errorMiddleware = require("./middleware/error-middleware");
+const { home } = require("./controllers/home.controllers");
 
 // MIDDLEWARES
 app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 // ROUTES
+app.use("/", home);
 app.use("/api/v1/", routes);
 
 // NOT FOUND ROUTE
