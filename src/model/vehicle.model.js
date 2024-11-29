@@ -25,7 +25,7 @@ function validateVehicle(vehicle) {
       .required(),
     city: Joi.string().required(),
     maxPictures: Joi.number().min(1).max(10).required(),
-    pictures: Joi.array().items(Joi.string().uri()),
+    pictures: Joi.array().items(Joi.string().uri()).required(),
     user: Joi.string().required(),
   });
   return schema.validate(vehicle);
