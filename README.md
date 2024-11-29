@@ -1,7 +1,7 @@
 # server url  
     https://car-selling-service-api-kappa.vercel.app/
-# Vechile METHOD POST 
-# URL = https://car-selling-service-api-kappa.vercel.app/api/v1/vechile
+Vechile METHOD POST 
+URL = https://car-selling-service-api-kappa.vercel.app/api/v1/vechile
 body {
     "user" : "507f1f77bcf86cd799439011",
     "model" : "778c",
@@ -15,9 +15,9 @@ body {
         ]
 }
 
-# User METHOD POST 
+User METHOD POST 
 # auth login
-# URL = https://car-selling-service-api-kappa.vercel.app/api/v1/auth
+URL = https://car-selling-service-api-kappa.vercel.app/api/v1/auth
 
 body {  
     "email" : "Amjad@desolint.com",
