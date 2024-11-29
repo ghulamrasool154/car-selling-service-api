@@ -22,6 +22,11 @@ exports.addVehicle = tryCatch(async (req, res, next) => {
   }
 
   const { pictures, maxPictures } = req.body;
+
+  if (pictures.length < 1) {
+    return next(new createHttpError.BadRequest("Picture is required"));
+  }
+  
   if (pictures.length > maxPictures) {
     let msg = `You can upload a maximum of ${maxPictures} pictures.`;
     return next(new createHttpError.BadRequest(msg));
